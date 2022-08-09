@@ -1,0 +1,132 @@
+<?php
+if(isset($_GET['pageset']))
+{
+	echo("Welcome");
+}else{
+session_start();
+if(isset($_SESSION['customer']))
+{
+	
+ echo 'Welcome'.$_SESSION['customer'].'<br>';
+ echo('<a href="login.php">Logout</a>');
+}
+}
+
+?>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style4.css">
+
+</head>
+<body>
+<div class="menu-bar">
+<ul>
+<Li><a href="index.php"></i>Home</a></Li>
+<Li><a href="#">Services</a>
+<div class="sub-menu-1">
+<ul>
+<li><a href="#">Ticket Booking</a></Li>
+<Li><a href="#">Bus Rental</a></Li>
+</ul>
+</div>
+</Li>
+<Li><a href="login.php">Log Out</a></Li>
+<li><a href="Contact Us.php">Contact Us</a></Li>
+</ul>
+</div>
+<div id="logo">
+<img src="100.jpg"/>
+</div>
+
+</header>
+
+
+
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+body{
+	background-image:url(../13.jpg);
+	background-size:cover;
+	background-position:center;
+	
+	font-family;sans-serif;
+}
+
+.menu-bar{
+	background:#DC143C;
+	text-align:center;
+	
+}
+
+.menu-bar ul{
+	display:inline-flex;
+	list-style:none;
+	color:#000;
+}
+
+.menu-bar ul li{
+	width:120px;
+	margin:15px;
+	padding:15px;
+}
+
+
+
+.menu-bar ul li a{
+	text-decoration:none;
+	color:#fff;
+}
+
+
+.menu-bar ul li:hover{
+	background:#7FFFD4;
+	border-radius:3px;
+
+}
+
+
+.sub-menu-1{
+	display:none;
+	
+}
+
+.menu-bar ul li:hover .sub-menu-1{
+	display:block;
+	position:absolute;
+	background:#ff0040;
+	margin-top:18px;
+	margin-left:-15px;
+	opacity:0.8;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul{
+	display:block;
+	margin:10px;
+	
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+	
+	width:150px;
+	paddding:10px;
+	border-bottom:1px dotted #fff;
+	border-radius:0;
+	text-align:left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+	border-bottom:none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+	color:#b2ff00;
+}
+
+.message{
+	color:#fff;
+	margin-left:550px;
+	margin-top:100px;
+	
+}
+

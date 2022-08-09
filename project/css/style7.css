@@ -1,0 +1,13 @@
+body
+{
+	margin:0;
+	padding:0;
+	background-image:url(../mrk42.jpg);
+	background-size:cover;
+	background-position:center;
+	height:100vh;
+	font-family:Century Gothic;
+}
+.padding{
+	padding:5rem !important;
+}
